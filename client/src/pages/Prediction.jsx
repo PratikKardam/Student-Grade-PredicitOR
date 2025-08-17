@@ -33,11 +33,7 @@ const Prediction = () => {
   });
 
   const { prediction, setPrediction } = useContext(AppContext);
-  // Reset prediction state to null on mount (reload)
-  useEffect(() => {
-    setPrediction(null);
-    // eslint-disable-next-line
-  }, []);
+
   const navigate = useNavigate();
 
   // Numeric fields
@@ -123,6 +119,9 @@ const Prediction = () => {
     }
   };
 
+  useEffect(() => {
+    setPrediction(null);
+  }, []);
 
   return (
     <div>
