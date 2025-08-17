@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit, sans-serif;
+}
+
+input[type="range"] {
+  accent-color: #606cfc;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #606cfc;
+  border: 2px solid #606cfc;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #606cfc;
+  border: 2px solid #606cfc;
+}
+
+input[type="range"]::-ms-thumb {
+  background: #606cfc;
+  border: 2px solid #606cfc;
+}
+
+input[type="checkbox"] {
+  accent-color: #606cfc;
+}
+
+.bg-primary{
+    background-color:#606cfc;
+}
+
+.input-field {
+    @apply border-2 border-gray-300 rounded-md p-2;
+}

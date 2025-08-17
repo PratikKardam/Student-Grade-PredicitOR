@@ -1,0 +1,40 @@
+# ---------------------------
+# Python / Flask backend
+# ---------------------------
+.venv/
+venv/
+env/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv metadata
+pyvenv.cfg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+*.env
+.env.*
+
+# ---------------------------
+# Node / React frontend
+# ---------------------------
+client/node_modules/
+client/dist/
+client/build/
+client/.vite/
+
+# Logs
+*.log
+
+# ---------------------------
+# System / IDE
+# ---------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
