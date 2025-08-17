@@ -126,16 +126,12 @@ const Prediction = () => {
 
   return (
     <div>
-      <div className='py-10'>
-        <h1 className='text-4xl  font-bold text-center'>Enter Your Details</h1>
-        <hr className='w-60 mx-auto my-4 border-2 border-black' />
-      </div>
+        <h1 className='py-10 text-4xl  font-bold text-center'>Enter Your Details</h1>
 
-      {/* Show form only if prediction is not available */}
       {prediction === null && (
         <div className='max-w-2xl mx-auto border border-gray-300 p-6 rounded-lg shadow-lg'>
           <form onSubmit={handleSubmit}>
-            {/* ...existing code... (all form fields and submit button) */}
+
             <h3 className='text-lg font-semibold py-4'>Demographic and Family Details : </h3>
             <div className="">
               <div className="flex flex-col gap-2 py-4">
