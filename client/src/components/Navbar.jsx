@@ -7,12 +7,15 @@ const Navbar = () => {
     const navigate = useNavigate()
 
   return (
-    <div className='flex items-center justify-between text-sm py-4 border-b border-b-gray-400'>
-      <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={assets.sgp_logo} alt="" />
+    <div className='flex items-center justify-between text-sm py-4 border-b border-b-gray-400 px-10'>
+      <img onClick={() => { navigate('/'); window.scrollTo(0, 0); }} className='w-44 cursor-pointer' src={assets.sgp_logo} alt="" />
       <ul className='md:flex items-start gap-5 font-medium hidden'>
         <NavLink to='/' end>
           {({ isActive }) => (
-            <li className='flex flex-col font-semibold items-center'>
+            <li
+              className='flex flex-col font-semibold items-center cursor-pointer'
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               HOME
               <hr
                 className={`border-none outline-none h-0.5 w-3/5 m-auto mt-1 ${isActive ? '' : 'hidden'}`}
@@ -23,7 +26,10 @@ const Navbar = () => {
         </NavLink>
         <NavLink to='/predict'>
           {({ isActive }) => (
-            <li className='flex flex-col font-semibold items-center'>
+            <li
+              className='flex flex-col font-semibold items-center cursor-pointer'
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               PREDICTION
               <hr
                 className={`border-none outline-none h-0.5 w-3/5 m-auto mt-1 ${isActive ? '' : 'hidden'}`}

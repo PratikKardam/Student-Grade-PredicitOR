@@ -24,7 +24,7 @@ const Hero = () => {
           Simply enter your study details and get accurate grade predictions. Track your progress, improve performance, and plan your academic journey with ease.
         </p>
         <button 
-          onClick={() => navigate('/predict')} 
+          onClick={() => { navigate('/predict'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} 
           className='bg-white text-[#606cfc] font-bold w-full sm:w-fit my-4 py-3 px-4 rounded-lg hover:cursor-pointer hover:scale-105 transition-all duration-200 shadow-md'
         >
           Make Prediction

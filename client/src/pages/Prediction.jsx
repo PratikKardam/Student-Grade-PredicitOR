@@ -388,7 +388,7 @@ const Prediction = () => {
 
             {/* Submit Button */}
             <div className='mt-4 flex justify-center'>
-              <button className='bg-primary w-[60vw] text-white px-10 py-2 rounded-xl mb-5' type="submit">
+              <button onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });}} className='bg-primary w-[60vw] text-white px-10 py-2 rounded-xl mb-5' type="submit">
                 Predict
               </button>
             </div>
