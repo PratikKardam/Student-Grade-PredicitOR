@@ -7,7 +7,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
   return (
-    <div className='flex items-center justify-between text-sm py-4 border-b border-b-gray-400 px-10'>
+    <div className='flex items-center justify-between text-sm py-4 border-b border-gray-200 px-10'>
       <img onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className='w-44 cursor-pointer' src={assets.sgp_logo} alt="" />
       <ul className='md:flex items-start gap-5 font-medium hidden'>
         <NavLink to='/'>
