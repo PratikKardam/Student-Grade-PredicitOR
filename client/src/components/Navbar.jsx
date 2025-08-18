@@ -8,9 +8,9 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between text-sm py-4 border-b border-b-gray-400 px-10'>
-      <img onClick={() => { navigate('/'); window.scrollTo(0, 0); }} className='w-44 cursor-pointer' src={assets.sgp_logo} alt="" />
+      <img onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className='w-44 cursor-pointer' src={assets.sgp_logo} alt="" />
       <ul className='md:flex items-start gap-5 font-medium hidden'>
-        <NavLink to='/' end>
+        <NavLink to='/'>
           {({ isActive }) => (
             <li
               className='flex flex-col font-semibold items-center cursor-pointer'

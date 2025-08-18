@@ -38,7 +38,6 @@ def predict():
             if field in data:
                 data[field] = int(data[field])
 
-        # Define category orders as in training
         address_categories = ['urban', 'rural']
         famsize_categories = ['LE3', 'GT3']
         Pstatus_categories = ['T', 'A']
@@ -47,8 +46,7 @@ def predict():
 
         def cat_code(value, categories):
             return categories.index(value) if value in categories else -1
-
-        # Convert categorical fields to codes
+        
         address_code = cat_code(data['address'], address_categories)
         famsize_code = cat_code(data['famsize'], famsize_categories)
         Pstatus_code = cat_code(data['Pstatus'], Pstatus_categories)

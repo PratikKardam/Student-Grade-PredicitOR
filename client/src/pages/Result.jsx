@@ -9,7 +9,7 @@ const Result = () => {
   const navigate = useNavigate();
 
     return (
-      <div className="min-h-screen flex flex-col justify-between">
+      <div className="min-h-[80vh] flex flex-col justify-between">
         <div className="flex-1 flex flex-col items-center justify-center">
           <div className='max-w-2xl w-full border border-gray-300 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center mt-10 mb-10'>
             <h3 className='text-lg font-semibold text-center py-7'>Your Final Grade Will Be : {prediction}</h3>

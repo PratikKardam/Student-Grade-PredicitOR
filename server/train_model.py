@@ -108,15 +108,6 @@ grid_search.fit(X_train, y_train)
 # Best parameters
 print("Best parameters found: ", grid_search.best_params_)
 
-# Boxplot for G3
-plt.figure(figsize=(6,5))
-plt.boxplot(df['G3'], vert=True, patch_artist=True, boxprops=dict(facecolor='skyblue'))
-plt.ylabel('Final Grade (G3)')
-plt.title('Boxplot of Final Grades (G3)')
-plt.tight_layout()
-plt.savefig('g3_boxplot.png')
-plt.close()
-
 # Histogram for G3
 plt.figure(figsize=(6,5))
 plt.hist(df['G3'], bins=15, color='orange', edgecolor='black', alpha=0.7)
@@ -146,20 +137,8 @@ plt.close()
 y_pred = grid_search.predict(X_test)
 l_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
-mse = mean_squared_error(y_test, y_pred)
-mae = mean_absolute_error(y_test, y_pred)
 r2l = r2_score(y_test, l_pred)
 print(f"Random Forest R²: {r2}")
-print(f"Random Forest MSE: {mse}")
-print(f"Random Forest MAE: {mae}")
-
-
-train_score = grid_search.score(X_train, y_train)
-test_score = grid_search.score(X_test, y_test)
-print(f"Random Forest Train R²: {train_score}")
-print(f"Random Forest Test R²: {test_score}")
-overfitting = train_score - test_score
-print(f"Random Forest Overfitting: {overfitting}")
 
 print(f"Linear Regression R²: {r2l}")
 
